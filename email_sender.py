@@ -1,9 +1,10 @@
+import os
 import sib_api_v3_sdk
 from sib_api_v3_sdk.rest import ApiException
 
 def get_app_instance():
 
-    api_key = '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'
+    api_key = os.environ['SENDINBLUE_KEY']
 
     configuration = sib_api_v3_sdk.Configuration()
     configuration.api_key['api-key'] = api_key
